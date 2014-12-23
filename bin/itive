@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/itive'
+
+i = Itive.new
+
+continue = true
+
+data = []
+while continue
+  puts 'datum name to add 1 to?'
+  input = gets.chomp
+  if input == 'done'
+    continue = false
+  else
+    data << { input => Time.now }
+    puts "data: #{data}"
+  end
+end
